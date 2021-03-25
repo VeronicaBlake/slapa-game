@@ -22,19 +22,19 @@ function addMods(){
     }
 }
 
-function giveShield(type){
+function giveShield(){
     let choice = items['shield']
-    target.push(choice)
+    target['items'].push(choice)
 }
 
 function giveArmor(){
-    let choices = Object.keys(items)
-    target.items.push(choices)
+    let choice = items['armor']
+    target.items.push(choice)
 }
 
-function givePaper(paper){
-    let choices = Object.keys(items)
-    target.items.push(choices)
+function givePaper(){
+    let choice = items['paper']
+    target.items.push(choice)
 }
 
 function slap(){
