@@ -9,14 +9,33 @@ let target ={
 }
 
 let items = {
-    sword : {name: 'Sword', mod: 5, description: "That's sharp!"},
-    magic: {name: 'Fireball', mod: 10, description: "Light it up!"},
-    fist: {name: 'Fists', mod: 2, description: "The weapon on the end of your arms!"}
+    shield : {name: 'Shield', mod: -10, description: "It's a shield."},
+    armor: {name: 'Skull Polish', mod: -5, description: "A clean, protective shine."},
+    paper: {name: 'Piece of Paper', mod: -1, description: "It's practically useless!"}
 }
 
-function giveSword(){
+function addMods(){
+    let totalMod = 0
+    for (let i = 0; i < array.length; i++) {
+       Object.keys(items) += totalMod
+       console.log(Object.keys(items))
+    }
+}
+
+function giveShield(type){
+    let choice = items['shield']
+    target.push(choice)
+}
+
+function giveArmor(){
     let choices = Object.keys(items)
-    target.items.push(choices.items)
+    target.items.push(choices)
+}
+
+function givePaper(paper){
+    let choices = Object.keys(items)
+    target.items.push(choices)
+}
 
 function slap(){
     health --
