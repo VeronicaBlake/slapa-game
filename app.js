@@ -5,7 +5,7 @@ let hits = -1
 
 let target ={
     health: 100,
-    items: []
+    buffs: []
 }
 
 let items = {
@@ -14,27 +14,27 @@ let items = {
     paper: {name: 'Piece of Paper', mod: -1, description: "It's practically useless!"}
 }
 
-function addMods(){
-    let totalMod = 0
-    for (let i = 0; i < array.length; i++) {
-       Object.keys(items) += totalMod
-       console.log(Object.keys(items))
-    }
-}
-
 function giveShield(){
     let choice = items['shield']
-    target['items'].push(choice)
+    target['buffs'].push(choice)
 }
 
 function giveArmor(){
     let choice = items['armor']
-    target.items.push(choice)
+    target['buffs'].push(choice)
 }
 
 function givePaper(){
     let choice = items['paper']
-    target.items.push(choice)
+    target['buffs'].push(choice)
+}
+
+let totalMod = 0
+function addMods(){
+    for (let i = 0; i < target.buffs.length; i++) {
+       totalMod += target['buffs'.mod]
+    }
+    return totalMod
 }
 
 function slap(){

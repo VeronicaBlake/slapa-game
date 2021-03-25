@@ -1,3 +1,11 @@
 img{
-    max-width: 20vh;
+    max-width: 60vh;
+    min-height: 40vh;
+}
+
+.fight-button{
+    margin: 1.5rem;
+    background-color: rgb(179, 32, 32);
+    border-width: .5rem;
+    border-color: black;
 }
